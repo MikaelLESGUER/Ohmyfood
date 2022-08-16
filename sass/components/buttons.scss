@@ -1,0 +1,40 @@
+.btn__about {
+    &>button {
+    border: 1px solid transparent;
+    padding: .75rem 1.5rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 100px;
+    color: #fff;
+    background-image: $linear-gradient;
+    cursor: pointer;
+    @include box-shadow;
+    &:hover {
+      background-color: rgb(174 128 229);
+      background-blend-mode: lighten;
+      @include hover-shadow-transition;
+      @include desktop{
+      font-weight:bold;
+      font-size: 1.5rem;
+      }
+    }
+    @include desktop{
+      width: 400px;
+      height: 65px;
+      @include font-size(1.4rem);
+    }
+  }
+}
+
+.card{
+  &__badge {
+    background-color: $color-tertiary;
+    color: #139273;
+    padding: 0.5rem;
+    font-weight: bold;
+    border-radius: 0.125rem;
+    position: absolute;
+    top: 1rem;
+    right: 0.75rem;
+  }
+}

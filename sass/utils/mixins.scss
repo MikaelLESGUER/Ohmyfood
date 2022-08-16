@@ -1,0 +1,103 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin border {
+    border: 1px solid transparent;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+@mixin flex($dir: row) {
+    display: flex;
+    flex-direction: $dir;
+    box-sizing: border-box;
+    @include no-margin-neither-padding;
+}
+
+@mixin centering($justify: center, $align: center) {
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin box-shadow {
+    box-shadow: 0 5px 0.94rem 0 #c3c3c3;
+}
+
+@mixin border-radius($radius-value: 25px) {
+    border-radius: $radius-value;
+}
+
+@mixin icon-styling {
+    margin-right: 1rem;
+    color: #7e7e7e;
+    @include desktop{
+      margin-right: 8rem;
+    }
+}
+
+@mixin font-size($size: 1.5rem) {
+    font-size: $size;
+}
+
+ @mixin color-state {
+  background: $color-state;
+}
+// Box-shadow
+@mixin box-shadow-darker {
+    box-shadow: black 4px 4px 6px;
+}
+
+@mixin hover-shadow-transition {
+    @include box-shadow-darker;
+    transition: box-shadow 400ms;
+}
+
+@mixin box-shadow-maps {
+  box-shadow: inset 0rem 0.3125rem 0.3125rem 0rem #dddddd;
+}
+//margin
+@mixin no-margin-neither-padding {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin no-margin {
+  margin: 0rem;
+}
+//colors
+@mixin white {
+    color: $white;
+}
+
+@mixin color-primary {
+    color: $color-primary;
+}
+
+@mixin font-weight($weight: bold) {
+    font-weight: $weight;
+}
+//breakpoint
+@mixin tablet {
+  @media screen and (min-width:map-get($breakpoints, tablet)){
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width:map-get($breakpoints, desktop)){
+    @content;
+  }
+}
+@mixin large {
+  @media screen and (min-width:map-get($breakpoints, large)){
+    @content;
+  }
+}
+
+@mixin medium-screen {
+  @media screen and (min-width: map-get($breakpoints, medium)) {
+    @content;
+  }
+}

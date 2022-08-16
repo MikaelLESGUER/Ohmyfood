@@ -1,0 +1,50 @@
+@import "./utils/variables", "./utils/mixins", "./utils/keyframes.scss", "./utils/functions", "./utils/breakpoint.scss";
+@import "./layout/header.scss","./layout/menu.scss", "./layout/about.scss" , "./layout/operation.scss","./layout/maps.scss" , "./layout/footer.scss","./layout/restaurant.scss" ,"./layout/loader.scss";
+@import "./components/buttons.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+li {
+    list-style-type: none;
+}
+
+.desktop {
+  @include desktop {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-bottom: 5px solid #9356dc;
+    box-shadow: 1em 0 0 #666;
+    background-color: rgb(246 246 246)
+  }
+}
+
+.reservation {
+  @include desktop{
+    grid-column-start: 1;
+    border-right: 3px solid rgb(221 221 221);
+  }
+}
+
+.function {
+  @include desktop {
+    grid-column-start: 2;
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "lesguer_mikael_3_220721.github.io",
+  "version": "1.0.0",
+  "description": "Dynamisez une page web avec des animations CSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "sass --watch ./sass/main.scss:./style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikaelLESGUER/Ohmyfood"
+  },
+  "author": "MikeDev35",
+  "license": "ISC",
+  "homepage": "https://mikaellesguer.github.io/Ohmyfood/"
+}
